@@ -94,9 +94,9 @@ export const deleteTask = async (req, res, next) => {
       });
     }
 
-    taskService.deleteTask(id);
+    await taskService.deleteTask(id);
 
-    res.status(204).send("Task deleted successfully");
+    res.status(200).json({message: "Task deleted successfully"});
   } catch (error) {
     next(error);
   }
