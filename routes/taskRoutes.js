@@ -13,7 +13,7 @@ const router = express.Router();
 // GET /tasks - List all tasks (with filtering and pagination)
 router.get('/', getAllTasks);
 
-// GET /tasks/stats - Get task statistics (must be before /:id route)
+// GET /tasks/stats - Get task statistics 
 router.get('/stats', getTaskStats);
 
 // GET /tasks/:id - Get specific task by ID
